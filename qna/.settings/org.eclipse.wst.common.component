@@ -4,6 +4,9 @@
     <property name="context-root" value="/"/>
     <wb-resource deploy-path="/" source-path="webapp"/>
     <property name="java-output-path" value="/target/classes"/>
+    <dependent-module archiveName="spring-test-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-test/4.0.5.RELEASE/spring-test-4.0.5.RELEASE.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
     <dependent-module archiveName="spring-core-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
