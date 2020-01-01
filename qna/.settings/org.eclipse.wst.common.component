@@ -4,16 +4,22 @@
     <property name="context-root" value="/"/>
     <wb-resource deploy-path="/" source-path="webapp"/>
     <property name="java-output-path" value="/target/classes"/>
-    <dependent-module archiveName="spring-webmvc-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-webmvc/4.0.5.RELEASE/spring-webmvc-4.0.5.RELEASE.jar">
+    <dependent-module archiveName="spring-core-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="commons-logging-1.1.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="spring-jdbc-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-jdbc/4.0.5.RELEASE/spring-jdbc-4.0.5.RELEASE.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="spring-beans-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-beans/4.0.5.RELEASE/spring-beans-4.0.5.RELEASE.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
-    <dependent-module archiveName="spring-core-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar">
+    <dependent-module archiveName="spring-tx-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
-    <dependent-module archiveName="commons-logging-1.1.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar">
+    <dependent-module archiveName="spring-webmvc-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-webmvc/4.0.5.RELEASE/spring-webmvc-4.0.5.RELEASE.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="spring-context-4.0.5.RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/springframework/spring-context/4.0.5.RELEASE/spring-context-4.0.5.RELEASE.jar">
@@ -38,6 +44,15 @@
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <dependent-module archiveName="slf4j-api-1.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="h2-1.4.179.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/h2database/h2/1.4.179/h2-1.4.179.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="commons-dbcp-1.2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/commons-dbcp/commons-dbcp/1.2.2/commons-dbcp-1.2.2.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="commons-pool-1.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/commons-pool/commons-pool/1.3/commons-pool-1.3.jar">
       <dependency-type>uses</dependency-type>
     </dependent-module>
     <wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>

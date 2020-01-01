@@ -9,6 +9,7 @@
 	<configs>
 		<config>webapp/WEB-INF/slipp-servlet.xml</config>
 		<config>src/test/resources/di.xml</config>
+		<config>src/main/resources/applicationContext.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
