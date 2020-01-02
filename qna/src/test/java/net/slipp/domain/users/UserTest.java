@@ -39,5 +39,33 @@ public class UserTest {
 			log.debug("violation error message : {}", constraintViolation.getMessage());
 		}
 	}
+	@Test
+	public void matchPassword() throws Exception {
+		String password = "password";
+		Authenticate authenticate = new Authenticate("userId", password);
+		User user = new User("userId", password, "name", "hello@hello.world");
+		assertTrue(user.matchPassword(authenticate));
+		
+		password = "password2";
+		authenticate = new Authenticate("userId", password);
+		assertFalse(user.matchPassword(authenticate));
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void updateWhenMisMatchUserId() throws Exception {
+		User user = new User("leesukjune", "123123", "sukjune", "hello@hello.world");
+		User updateUser = new User("leesukjun", "12341234", "sukjunelee", "hello@hello.world");
+		User updatedUser = user.update(updateUser);
+			
+	}
+	
+	@Test
+	public void update() throws Exception {
+		User user = new User("leesukjune", "123123", "sukjune", "hello@hello.world");
+		User updateUser = new User("leesukjune", "12341234", "sukjunelee", "hello@hello.world");
+		User updatedUser = user.update(updateUser);
+		assertThat(updatedUser, is(updateUser));
+			
+	}
 
 }

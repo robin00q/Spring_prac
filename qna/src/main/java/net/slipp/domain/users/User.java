@@ -61,6 +61,28 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	public boolean matchPassword(Authenticate authenticate) {
+		if(this.password == null) {
+			return false;
+		}
+		return authenticate.matchPassword(this.password);
+	}
+	
+	public boolean matchUserId(String inputUserId) {
+		if(inputUserId == null) {
+			return false;
+		}
+		return inputUserId.equals(this.userId);
+	}
+	
+	public User update(User updateUser) {
+		if(!matchUserId(updateUser.getUserId())) {
+			throw new IllegalArgumentException();
+		}
+		
+		return new User(this.userId, updateUser.password, updateUser.name, updateUser.email);
+	}
 	
 	@Override
 	public int hashCode() {
@@ -71,6 +93,7 @@ public class User {
 		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
 		return result;
 	}
+	
 
 	@Override
 	public boolean equals(Object obj) {
@@ -104,5 +127,11 @@ public class User {
 		
 		return userId + " " + password + " " + name + " " + email;
 	}
+
+	
+
+
+
+
 	
 }
